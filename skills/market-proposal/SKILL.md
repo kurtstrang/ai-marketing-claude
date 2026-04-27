@@ -1,12 +1,12 @@
-# Client Proposal Generator for Marketing Services
+# Moss Proposal Generator for Spend Management
 
 ## Skill Purpose
-Generate a professional, client-ready marketing services proposal. This skill produces a complete proposal document that positions the agency/consultant as the clear choice, frames pricing with anchoring and tiered options, and includes ROI projections to justify the investment.
+Generate a professional, client-ready Moss spend management proposal. This skill produces a complete proposal document that positions Moss as the clear choice, frames pricing with anchoring and tiered options, and includes ROI projections to justify the investment.
 
 ## When to Use
-- User wants to create a proposal for a prospective marketing client
+- User wants to create a proposal for a prospective Moss customer
 - User has completed a discovery call and needs to formalize the engagement
-- User wants a template for their marketing agency's proposals
+- User wants a template for Moss commercial proposals
 - Triggered by `/market proposal` or `/market proposal <client name>`
 
 ## How to Execute
@@ -16,19 +16,28 @@ Collect these details from the user (ask if not provided):
 
 **About the Client:**
 1. Client name and company
-2. Industry and business model
-3. Current marketing situation (what they're doing now)
+2. Industry, business model, and whether they operate one entity or multiple entities
+3. Current spend management situation (cards, invoices/AP, reimbursements, budgets, approvals, accounting exports, ERP/accounting stack)
 4. Primary pain points or challenges
-5. Goals (revenue, growth, leads, brand awareness)
+5. Goals (control, visibility, automation, faster close, policy compliance, reduced manual work, employee autonomy)
 6. Budget range (if known)
 7. Decision timeline
 8. Key stakeholders and decision-makers
 
+**Hardcoded Moss context to use by default:**
+- Moss is a spend management platform built for finance teams that want visibility, control, and automation across company spend.
+- Moss' core modules are corporate cards, invoice management / accounts payable, employee reimbursements, budget control, integrations, and accounting automation.
+- Moss is strongest when the buyer needs one platform across cards, invoices, reimbursements, approvals, and accounting workflows rather than a patchwork of tools.
+- Moss' typical best-fit customer is a European SME / medium-sized company with roughly 30-250 employees and meaningful indirect spend.
+- Common strong-fit industries include agencies, software / SaaS, IT services, professional services, e-commerce operators, and multi-entity growth companies.
+- Moss' core buying committee usually includes CFO, Head of Finance, Finance Manager, Controller, Accounting lead, and sometimes Operations or IT.
+- Moss' default brand voice is clear, confident, practical, finance-literate, and low-fluff. Write like a trusted finance operator, not a generic marketer.
+
 **About the Services:**
-1. What services are you proposing? (SEO, paid ads, content, social, email, full-stack)
-2. Engagement model (retainer, project, performance-based)
+1. Which Moss modules are you proposing? (Corporate Cards, Invoice Management / Accounts Payable, Reimbursements, Budget Control, Integrations, Accounting Automation)
+2. Commercial model (platform subscription, implementation fee, phased rollout, multi-entity expansion)
 3. Proposed timeline
-4. Your relevant case studies or results
+4. Relevant Moss case studies, customer stories, proof points, or public results
 
 **If audit data exists:** Check for any previous `/market audit` results. If found, automatically incorporate the findings into the Situation Analysis section for a data-backed proposal.
 
@@ -36,37 +45,37 @@ Collect these details from the user (ask if not provided):
 If the user hasn't had the discovery call yet, provide these 10 essential questions:
 
 **Business Understanding:**
-1. "Walk me through your business model. How do you make money?"
-2. "Who is your ideal customer? Describe them in detail."
-3. "What does your sales process look like from first touch to closed deal?"
+1. "Walk me through your business model, entity structure, and how spend is managed today."
+2. "Which teams spend company money most often, and what kinds of indirect spend are hardest to control?"
+3. "What does your current process look like from request or purchase through approval, reconciliation, and export into accounting?"
 
 **Current Marketing:**
-4. "What marketing are you doing today, and what's working or not working?"
-5. "What's your current monthly marketing spend, and what's the ROI?"
-6. "What tools and platforms are you using?"
+4. "What tools are you using today for cards, invoice handling, reimbursements, approvals, and accounting?"
+5. "What is the current cost of the status quo in time, delays, policy breaches, reconciliation effort, or missed visibility?"
+6. "What ERP, accounting, HR, or finance tools need to stay in the stack?"
 
 **Goals and Expectations:**
 7. "If we're wildly successful, what does that look like in 6 months? 12 months?"
-8. "What specific numbers are you trying to hit? (Revenue, leads, traffic)"
-9. "What's the lifetime value of a customer for you?"
+8. "What specific numbers are you trying to hit? (Hours saved, faster month-end close, more spend under policy, fewer reimbursement delays, fewer manual touches)"
+9. "What is the size of the opportunity for this project? (Monthly spend, invoice volume, number of cardholders, reimbursement volume, entities, finance team size)"
 
 **Decision and Process:**
 10. "Who else is involved in this decision, and what's your timeline for choosing a partner?"
 
 **Bonus Questions:**
-- "What's your biggest frustration with marketing right now?"
-- "Have you worked with agencies or consultants before? What went well or poorly?"
-- "Is there anything that would make you say 'no' to working together?"
+- "What's your biggest frustration with spend control or finance ops right now?"
+- "Have you used a spend management tool before? What went well or poorly?"
+- "Is there anything that would make you say 'no' to working with Moss?"
 
 ### Step 3: Build the Proposal Document
 
 #### Section 1: Cover Page
 ```
-[Your Company Logo]
+[Moss Logo]
 
-Marketing Strategy Proposal
+Spend Management Proposal
 Prepared for: [Client Name]
-Prepared by: [Your Name / Agency]
+Prepared by: [Moss Team]
 Date: [Date]
 Valid until: [Date + 30 days]
 
@@ -75,48 +84,48 @@ CONFIDENTIAL
 
 #### Section 2: Executive Summary (1 page max)
 Write a concise summary that:
-- Acknowledges the client's situation and goals
-- States the core problem you will solve
-- Previews your recommended approach
-- Hints at the expected outcome
+- Acknowledges the client's current finance operations and goals
+- States the core spend-management problem Moss will solve
+- Previews the recommended Moss module mix and rollout approach
+- Hints at the expected business outcome
 - Creates urgency to act
 
 **Template:**
 ```
-[Client Name] is at an inflection point. With [current situation -- e.g., strong product-market fit but inconsistent lead generation], there's a significant opportunity to [desired outcome -- e.g., scale customer acquisition to support your growth targets].
+[Client Name] is at an inflection point. With [current situation -- e.g., disconnected cards, invoice processing, and reimbursements creating manual finance work and weak spend visibility], there's a significant opportunity to [desired outcome -- e.g., centralize company spend, enforce policy before money is spent, and reduce month-end effort].
 
-Based on our analysis of [what you reviewed -- their website, ads, competitors, etc.], we've identified [X] key areas where strategic improvements could drive [specific result -- e.g., a 40-60% increase in qualified leads within 6 months].
+Based on our analysis of [what you reviewed -- their workflows, current tools, approval structure, accounting setup, and competitive options], we've identified [X] key areas where strategic improvements could drive [specific result -- e.g., faster reconciliation, stronger spend control, and measurable time savings within 3-6 months].
 
-This proposal outlines a [timeframe] engagement focused on [primary service areas], designed to [primary outcome]. Our approach is built on [your differentiator -- e.g., data-driven methodology, industry expertise, proven frameworks].
+This proposal outlines a [timeframe] engagement focused on [primary Moss modules], designed to [primary outcome]. Our approach is built on [Moss differentiator -- e.g., unified cards + AP + reimbursements + accounting automation, strong finance controls, proven rollout support, and best-in-class integrations].
 
-We recommend beginning with [first phase] to establish baselines and quick wins, then scaling efforts based on performance data.
+We recommend beginning with [first phase] to establish baselines and quick wins, then scaling usage based on performance data and adoption.
 ```
 
 #### Section 3: Situation Analysis (2-3 pages)
-Present your analysis of the client's current marketing. This is where audit data from `/market audit` is invaluable.
+Present your analysis of the client's current spend management setup. This is where audit data from `/market audit` is invaluable.
 
 **Structure:**
-1. **Current State Overview** -- What they're doing now and how it's performing
-2. **Opportunities Identified** -- Specific areas where improvement is possible
-3. **Competitive Landscape** -- How they compare to competitors (from `/market competitors` if available)
-4. **Key Challenges** -- Obstacles that need to be addressed
-5. **Market Context** -- Industry trends and benchmarks
+1. **Current State Overview** -- What they're doing now across cards, invoices, reimbursements, budgets, approvals, and accounting exports
+2. **Opportunities Identified** -- Specific areas where control, visibility, automation, or speed can improve
+3. **Competitive Landscape** -- How they compare to alternatives and the status quo. Default Moss comparison set: manual processes / spreadsheets + bank cards, Pleo, Spendesk, Payhawk, and SAP Concur. Emphasize where Moss wins: deeper control, stronger accounting automation, and one unified platform across cards, AP, reimbursements, and approvals.
+4. **Key Challenges** -- Obstacles that need to be addressed (change management, integrations, approval design, rollout scope, multi-entity complexity)
+5. **Market Context** -- Industry trends and benchmarks in spend management, finance automation, compliance, and efficiency for SMEs
 
 **Important:** Frame everything as opportunities, not failures. The client should feel understood, not criticized.
 
-Good: "Your website converts at approximately 1.8%, which is below the industry benchmark of 3.2%. We see a clear path to close this gap through targeted CRO initiatives."
+Good: "Your finance team currently reconciles cards, invoices, and reimbursements across multiple tools. We see a clear path to reduce manual effort, increase policy compliance, and give the business real-time visibility with a phased Moss rollout."
 
-Bad: "Your website has a terrible conversion rate and needs a complete overhaul."
+Bad: "Your finance process is broken and needs to be replaced."
 
 #### Section 4: Strategy and Approach (2-3 pages)
-Present your recommended strategy. Be specific enough to demonstrate expertise but not so detailed that they could execute it without you.
+Present your recommended strategy. Be specific enough to demonstrate expertise but not so detailed that they could execute the rollout without Moss.
 
 **Structure:**
-1. **Strategic Framework** -- Your overall approach and methodology
-2. **Phase 1: Foundation** (Month 1-2) -- Setup, audits, baselines, quick wins
-3. **Phase 2: Growth** (Month 3-4) -- Core campaign execution, optimization
-4. **Phase 3: Scale** (Month 5-6) -- Expand what works, cut what doesn't, increase investment in winners
-5. **Ongoing: Optimize** -- Continuous improvement, reporting, strategy refinement
+1. **Strategic Framework** -- Your overall approach and methodology. Use a Moss-specific framework: control first, automate second, scale third.
+2. **Phase 1: Foundation** (Month 1-2) -- Process mapping, module scoping, stakeholder alignment, integration review, approval policy design, quick wins
+3. **Phase 2: Growth** (Month 3-4) -- Launch core modules, onboard users, optimize approval flows, improve finance adoption, reduce manual work
+4. **Phase 3: Scale** (Month 5-6) -- Expand to more teams, entities, use cases, and higher-value automations; increase adoption of winning workflows
+5. **Ongoing: Optimize** -- Continuous improvement, reporting, governance, and success planning
 
 For each phase, include:
 - Specific activities and deliverables
@@ -127,24 +136,25 @@ For each phase, include:
 Detail exactly what is included (and what is not).
 
 **Include:**
-- Specific deliverables with quantities (e.g., "8 blog posts per month, 1,500-2,000 words each")
-- Meeting cadence (e.g., "Bi-weekly strategy calls, monthly reporting")
-- Response time commitments (e.g., "24-hour response on business days")
-- Tools and platforms included
+- Specific deliverables with quantities (e.g., "1 solution design workshop, 1 rollout plan, 2 admin enablement sessions, 1 finance training session, integration scoping for [X] systems")
+- Meeting cadence (e.g., "Weekly implementation working sessions during rollout, monthly business reviews post-launch")
+- Response time commitments (e.g., "Commercial follow-up within 1 business day, agreed implementation cadence during onboarding")
+- Moss modules, add-ons, and integrations included
 - Reporting format and frequency
 
 **Explicitly Exclude:**
 - Items outside scope to prevent scope creep
-- Additional costs (ad spend, software, stock photos)
+- Custom product development, bespoke connectors, or unsupported integrations unless separately agreed
+- Legal, security, procurement, or IT work that must be completed on the client's side
 - Assumptions about client responsibilities
 
 **Client Responsibilities Section:**
 List what you need from the client to be successful:
 - Timely feedback and approvals (specify SLA)
-- Access to accounts, tools, and data
+- Access to current tools, workflows, and relevant data
 - Designated point of contact
-- Content approvals within X business days
-- Ad budget (separate from management fees)
+- Timely review of security, legal, and procurement materials within X business days
+- Internal rollout support for admins, approvers, finance, and end users
 
 #### Section 6: Timeline (1 page)
 Visual timeline showing phases, milestones, and deliverables.
@@ -153,15 +163,15 @@ Visual timeline showing phases, milestones, and deliverables.
 Month 1    | Month 2    | Month 3    | Month 4    | Month 5    | Month 6
 -----------|------------|------------|------------|------------|----------
 FOUNDATION | FOUNDATION | GROWTH     | GROWTH     | SCALE      | SCALE
-Audit &    | Quick wins | Campaign   | Optimize   | Expand     | Full
-Setup      | & baselines| Launch     | & iterate  | winners    | throttle
+Discovery &| Quick wins | Launch     | Optimize   | Expand     | Full
+Setup      | & baselines| core flows | & iterate  | winners    | rollout
 
 Key Milestones:
-- Week 2: Complete audit and strategy document
-- Week 4: First campaigns live
-- Month 2: First performance report
-- Month 3: Optimization recommendations
-- Month 6: Comprehensive review and strategy refresh
+- Week 2: Complete workflow discovery and recommended solution design
+- Week 4: Confirm rollout scope, integrations, and approval policy setup
+- Month 2: First module(s) live or pilot users onboarded
+- Month 3: Adoption and optimization recommendations
+- Month 6: Comprehensive review and expansion roadmap
 ```
 
 #### Section 7: Investment (1-2 pages)
@@ -169,34 +179,34 @@ Present pricing using the Good-Better-Best tier structure.
 
 **Three-Tier Pricing Model:**
 
-| Component | Growth | Accelerate | Dominate |
+| Component | Control | Automate | Unify |
 |---|---|---|---|
-| Strategy & Planning | Quarterly review | Monthly strategy | Weekly strategy |
-| Content Creation | 4 pieces/month | 8 pieces/month | 16 pieces/month |
-| Social Media | 3 platforms | 5 platforms | All platforms |
-| Paid Ads Management | Up to $5K spend | Up to $15K spend | Up to $50K spend |
-| SEO | Basic on-page | Full SEO program | Full SEO + link building |
-| Email Marketing | -- | Monthly newsletter | Full automation |
-| Reporting | Monthly report | Bi-weekly report | Weekly dashboard |
-| Meetings | Monthly call | Bi-weekly call | Weekly call |
-| **Monthly Investment** | **$X,XXX** | **$X,XXX** | **$X,XXX** |
+| Corporate Cards | Core card program | Cards + policy controls | Full company-wide card rollout |
+| Invoice Management / AP | -- | Included | Included + advanced workflows |
+| Reimbursements | Basic | Included | Included |
+| Budget Control | Team-level | Department-level | Multi-team / multi-entity |
+| Accounting Automation | Standard exports | Enhanced automation | Advanced automation + deeper finance ops |
+| Integrations | Standard accounting integration | Multiple integrations | Advanced integration scope |
+| Onboarding | Standard onboarding | Guided rollout | Multi-phase rollout |
+| Reporting / Reviews | Monthly review | Bi-weekly review | Strategic review cadence |
+| **Monthly / Annual Investment** | **[Use approved Moss pricing]** | **[Use approved Moss pricing]** | **[Use approved Moss pricing]** |
 
 **Pricing Psychology Tips:**
 - Present three options; most clients choose the middle tier
-- Name the tiers with aspirational labels (not Bronze/Silver/Gold)
-- Anchor the highest tier first to make the middle tier feel reasonable
-- Include a "Most Popular" or "Recommended" badge on the middle tier
-- Show the math: "At [your LTV], you only need [X] new customers per month to see positive ROI"
+- Name the tiers with outcome-driven labels (not Bronze/Silver/Gold)
+- Anchor the most complete option first to make the middle tier feel reasonable
+- Include a "Most Popular" or "Recommended" badge on the middle tier when justified
+- Show the math: "At [estimated monthly finance time saved or spend reduction], you only need [X] efficiency gain to justify the investment"
 
 **Pricing Models Reference:**
 
 | Model | When to Use | Typical Range |
 |---|---|---|
-| Monthly Retainer | Ongoing services, relationship-based | $2,000-$25,000/month |
-| Project-Based | Defined scope, one-time deliverable | $5,000-$100,000 per project |
-| Performance-Based | Client wants risk-sharing, you're confident | Base + % of revenue/leads |
-| Hybrid | Complex engagements | Base retainer + performance bonus |
-| Hourly | Consulting, advisory, ad-hoc | $150-$500/hour |
+| Platform Subscription | Standard Moss commercial motion | Use current approved regional pricing only |
+| Platform + Implementation | New rollouts with onboarding and setup complexity | Use approved quote only |
+| Multi-Entity / Advanced Scope | Multi-entity, larger process complexity, advanced finance requirements | Use approved quote only |
+| Phased Rollout | Lower-risk start or budget-constrained rollout | Use approved quote only |
+| Partner / Referral Motion | Accountant, advisor, consultant, or channel-led opportunity | Use approved partner commercial terms only |
 
 #### Section 8: ROI Projection
 Show the client the expected return on their investment.
@@ -204,26 +214,28 @@ Show the client the expected return on their investment.
 **ROI Calculation Framework:**
 ```
 Current State:
-- Monthly website traffic: [X]
-- Current conversion rate: [X%]
-- Current leads/month: [X]
-- Close rate: [X%]
-- Average deal value: $[X]
-- Current monthly revenue from marketing: $[X]
+- Monthly company spend: [X]
+- Monthly invoice volume: [X]
+- Number of cardholders / spenders: [X]
+- Current finance admin hours/month: [X]
+- Current month-end close time: [X]
+- Current reimbursement turnaround time: [X]
+- Current monthly cost of manual finance operations / leakage: [X]
 
 Projected State (6 months):
-- Projected traffic increase: [X%] -> [new traffic]
-- Projected conversion rate: [X%] -> [new leads/month]
-- Projected leads increase: [X%]
-- Projected revenue increase: $[X]/month
+- Projected reduction in manual processing time: [X%] -> [new hours/month]
+- Projected increase in spend under policy: [X%]
+- Projected faster close or reconciliation cycle: [X days/hours]
+- Projected savings from reduced leakage / duplicate / uncontrolled spend: [X]/month
+- Projected capacity freed for finance team: [X hours or FTE equivalent]
 - 6-month projected ROI: [X]x
 
-Investment: $[total 6-month cost]
-Projected Return: $[projected revenue increase]
+Investment: [total 6-month or 12-month cost]
+Projected Return: [projected savings + efficiency value]
 ROI: [X]x return
 ```
 
-**Important:** Be conservative with projections. Under-promise and over-deliver. Use ranges rather than specific numbers. Add disclaimers that results depend on multiple factors.
+**Important:** Be conservative with projections. Under-promise and over-deliver. Use ranges rather than specific numbers. Add disclaimers that results depend on rollout quality, adoption, stakeholder engagement, and the client's starting point. Never invent Moss pricing or promise unsupported outcomes.
 
 #### Section 9: Team (0.5-1 page)
 Introduce the team members who will work on this account.
@@ -234,18 +246,32 @@ For each team member:
 - Role on this engagement
 - Brief bio (2-3 sentences max)
 
+Default Moss team structure to use unless the user provides a different one:
+- Account Executive / Commercial Lead
+- Solutions Engineer or Product Specialist
+- Implementation / Onboarding Manager
+- Customer Success Manager or Account Manager
+
 #### Section 10: Case Studies (1-2 pages)
 Include 2-3 relevant case studies that demonstrate results similar to what you're promising.
+
+Prioritize public Moss customer stories that match the client's industry, size, and pain points. Strong default use cases include:
+- Agencies / services firms with distributed spend and project-based purchasing
+- SaaS / tech companies with subscriptions, travel, and employee card needs
+- Finance teams managing reimbursements, approvals, and reconciliation across multiple departments
+- Multi-entity or scaling teams that need visibility and control without adding headcount
+
+Use only approved/public proof. If exact figures are unavailable or unapproved, anonymize and use directional outcomes.
 
 **Case Study Format:**
 ```
 Client: [Industry and company type -- anonymize if needed]
 Challenge: [1-2 sentences about their situation]
-Solution: [1-2 sentences about what you did]
+Solution: [1-2 sentences about the Moss modules and rollout approach]
 Results:
-- [Specific metric 1: e.g., "Increased organic traffic 287% in 6 months"]
-- [Specific metric 2: e.g., "Reduced cost per lead from $45 to $12"]
-- [Specific metric 3: e.g., "Generated $180K in new revenue"]
+- [Specific metric 1: e.g., "Reduced transaction processing time by 30%"]
+- [Specific metric 2: e.g., "Saved approximately one week per month in reconciliation effort"]
+- [Specific metric 3: e.g., "Improved visibility, policy compliance, or reimbursement turnaround"]
 ```
 
 #### Section 11: Next Steps (0.5 page)
@@ -254,9 +280,9 @@ Make it crystal clear what happens next. Reduce friction.
 ```
 Ready to move forward? Here's what happens next:
 
-1. Sign this proposal (e-signature link included)
-2. We'll schedule a kickoff call within 48 hours
-3. You'll receive our onboarding questionnaire and access request form
+1. Sign this proposal or confirm your preferred option
+2. We'll schedule a kickoff / solution alignment call within 48 hours
+3. You'll receive the onboarding checklist, access requests, and implementation plan
 4. We begin the Foundation phase immediately
 
 Questions? Contact [Name] at [email] or [phone].
@@ -268,9 +294,9 @@ This proposal is valid until [date -- 30 days from now].
 
 **Best Practices:**
 - Keep total proposal under 15 pages (excluding appendix)
-- Use consistent headers, fonts, and colors throughout
-- Include the client's logo alongside yours on the cover page
-- Use charts and visuals instead of dense text wherever possible
+- Use consistent headers, fonts, and Moss brand styling throughout
+- Include the client's logo alongside the Moss logo on the cover page
+- Use charts, workflows, screenshots, and visuals instead of dense text wherever possible
 - Bold key numbers and outcomes
 - Use whitespace generously -- don't cram content
 - Include page numbers and a table of contents for longer proposals
@@ -287,13 +313,13 @@ This proposal is valid until [date -- 30 days from now].
 ### Step 5: Follow-Up Sequence After Sending
 
 **Day 0 (Send Day):**
-Send proposal via email with a brief cover note. Subject: "Your Marketing Growth Plan -- [Client Name]"
+Send proposal via email with a brief cover note. Subject: "Your Moss Spend Management Proposal -- [Client Name]"
 
 **Day 2:**
 Follow-up email: "I wanted to make sure you received the proposal. Happy to hop on a quick call to walk through it if that would be helpful."
 
 **Day 5:**
-Value-add follow-up: Share a relevant article, case study, or insight related to their industry. Softly reference the proposal.
+Value-add follow-up: Share a relevant Moss customer story, product tour, integration page, or finance insight related to their use case. Softly reference the proposal.
 
 **Day 7:**
 Direct follow-up: "I'd love to hear your thoughts on the proposal. Do you have any questions I can address? I'm available [specific times] this week for a call."
@@ -310,29 +336,29 @@ Prepare responses for common client pushbacks:
 
 | Objection | Response Framework |
 |---|---|
-| "Too expensive" | Reframe as investment, show ROI math, offer smaller starting scope, compare to cost of inaction |
-| "We can do this in-house" | Highlight opportunity cost, specialized expertise, speed to results, and the real fully-loaded cost of in-house |
-| "We tried this before and it didn't work" | Ask what specifically didn't work, differentiate your approach, offer a pilot project with clear success criteria |
-| "We need to think about it" | Set a specific follow-up date, offer to address specific concerns, provide additional references |
-| "Can you guarantee results?" | Explain why guarantees are unrealistic in marketing but share historical results, offer performance-based component |
-| "We're talking to other agencies" | Welcome it, differentiate on methodology not price, offer a trial period, emphasize culture fit |
-| "The timeline is too long" | Explain why shortcuts fail, offer a quick-wins phase, show the phased approach with early value |
-| "We don't have the budget right now" | Offer a smaller starting engagement, defer some payment, show the cost of waiting |
+| "Too expensive" | Reframe as investment, show ROI math tied to finance time saved, control gained, and cost of poor spend visibility, offer phased rollout where appropriate |
+| "We can do this in-house" | Highlight opportunity cost, complexity of stitching together cards + AP + reimbursements + approvals, speed to value, and the hidden cost of manual finance ops |
+| "We tried this before and it didn't work" | Ask what specifically didn't work, differentiate Moss on unified workflows, finance controls, accounting automation, and structured rollout support |
+| "We need to think about it" | Set a specific follow-up date, offer to address specific concerns, provide relevant proof points or customer stories |
+| "Can you guarantee results?" | Explain why guarantees are unrealistic because results depend on rollout and adoption, but share historical/public proof and provide conservative ROI ranges |
+| "We're talking to other vendors" | Welcome it, differentiate on methodology and platform depth rather than price alone, emphasize finance control, accounting automation, and fit for their process complexity |
+| "The timeline is too long" | Explain why shortcuts create adoption and data-quality problems, offer a quick-wins phase, and show the phased approach with early value |
+| "We don't have the budget right now" | Offer a smaller starting module mix, phased rollout, or delayed expansion, and show the cost of waiting |
 
 ### Step 7: Terms and Conditions Essentials
 
 Include these in the proposal appendix or as a separate document:
 
-1. **Payment Terms:** Net 15 or Net 30, payment methods, late payment penalties
-2. **Contract Duration:** Minimum commitment period, auto-renewal terms
-3. **Cancellation Policy:** Required notice period (typically 30 days), exit process
-4. **Scope Changes:** Process for handling scope changes and additional costs
-5. **Intellectual Property:** Who owns the work product, license terms
-6. **Confidentiality:** NDA terms, how client data is handled
+1. **Payment Terms:** Net terms, payment methods, billing cadence, late payment policies
+2. **Contract Duration:** Minimum commitment period, renewal terms, rollout period
+3. **Cancellation Policy:** Required notice period, exit process
+4. **Scope Changes:** Process for handling additional modules, entities, integrations, or services
+5. **Intellectual Property:** Platform ownership, usage rights, implementation materials, license terms
+6. **Confidentiality:** NDA terms, data handling, DPA/security documentation references
 7. **Liability Limitations:** Caps on liability, force majeure
 8. **Reporting and Communication:** Agreed cadence and format
-9. **Third-Party Costs:** Client responsibility for ad spend, software, stock images
-10. **Results Disclaimer:** Marketing results are not guaranteed, past performance context
+9. **Third-Party Costs:** Client responsibility for any third-party systems, payment costs, or implementation dependencies outside Moss scope
+10. **Results Disclaimer:** Outcomes are not guaranteed; projections depend on adoption, rollout, process maturity, and other factors
 
 ## Output Format
 
@@ -373,9 +399,10 @@ Generate a file called `CLIENT-PROPOSAL.md` with:
 
 ## Key Principles
 - The proposal is a sales document, not a statement of work. It should SELL, not just describe.
-- Lead with the client's problems and goals, not your services. Make them feel understood before presenting solutions.
+- Lead with the client's finance and spend-control problems and goals, not your product features. Make them feel understood before presenting solutions.
 - Every price should be anchored to the ROI it will generate. Never present cost without context.
 - Use the client's own language from the discovery call. Mirror their words back to them.
-- If audit data is available from previous skills, use it extensively -- data-backed proposals close at 2-3x the rate of generic proposals.
-- Keep it concise. Executives skim. Use bold, headers, and tables to make key information scannable.
+- If audit data is available from previous skills, use it extensively -- data-backed proposals close at a much higher rate than generic proposals.
+- Keep it concise. Finance leaders skim. Use bold, headers, and tables to make key information scannable.
 - Always include a specific, time-bound next step. Ambiguity kills deals.
+- Never invent Moss pricing, packaging, timelines, integrations, security claims, or case-study results. Use approved materials or clearly marked placeholders.

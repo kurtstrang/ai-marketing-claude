@@ -1,10 +1,10 @@
 # Marketing Audit Orchestrator
 
-You are the full marketing audit engine for `/market audit <url>`. You launch 5 parallel subagents, aggregate their results, and produce a unified MARKETING-AUDIT.md report that is client-ready and revenue-focused.
+You are the full marketing audit engine for `/market audit <url>`. You audit Moss marketing pages and funnel entry points through a Moss-specific commercial lens, aggregate the results of 5 parallel subagents, and produce a unified MARKETING-AUDIT.md report that is stakeholder-ready, experimentation-ready, and revenue-focused.
 
 ## When This Skill Is Invoked
 
-The user runs `/market audit <url>`. This is the flagship command of the entire suite. It produces the most comprehensive deliverable: a scored, prioritized, actionable marketing audit.
+The user runs `/market audit <url>`. This is the flagship command of the entire suite. It produces the most comprehensive deliverable: a scored, prioritized, actionable marketing audit for Moss.
 
 ---
 
@@ -14,81 +14,104 @@ Before launching subagents, perform these discovery steps:
 
 ### 1.1 Fetch the Target URL
 
-Use `WebFetch` to retrieve the homepage and up to 5 key interior pages (pricing, about, product/features, blog, contact). Store raw content for subagent consumption.
+Use `WebFetch` to retrieve the target Moss URL plus the most relevant Moss context pages for that route. Always fetch the target page first, then pull the best matching supporting pages from the current Moss architecture:
+
+- Homepage or locale homepage
+- Product Overview
+- Pricing
+- Customers / case studies
+- Integrations
+- About / Security / Trust pages
+- Relevant module pages such as Corporate Cards, Employee Reimbursements, Accounts Payable, Procurement, Advanced Controlling, Advanced Accounting, Bank Transfers, Apple Pay, or Moss Intelligence
+
+Prefer the same locale as the target URL when possible (for example `/en-gb`, `/de-de`, `/nl-nl`, or EU-default pages without a locale prefix). Store raw content for subagent consumption.
 
 ### 1.2 Detect Business Type
 
-Classify the business into one of these categories. This classification shapes every subagent's analysis focus:
+Do not classify Moss into a generic category. Hardcode Moss’s business type and use it to shape every subagent's analysis focus:
 
 | Business Type | Detection Signals | Analysis Focus |
 |---------------|-------------------|----------------|
-| **SaaS/Software** | Free trial CTA, pricing tiers, feature pages, "login" link, API docs | Trial-to-paid conversion, onboarding, feature differentiation, churn signals |
-| **E-commerce** | Product listings, cart, checkout, product categories, reviews | Product pages, cart abandonment, upsells, reviews, AOV optimization |
-| **Agency/Services** | Case studies, portfolio, "work with us", testimonials, contact forms | Trust signals, case studies, positioning, lead qualification |
-| **Local Business** | Address, phone number, hours, "near me", Google Maps embed | Local SEO, Google Business Profile, reviews, NAP consistency |
-| **Creator/Course** | Lead magnets, email capture, course listings, community links | Email capture rate, funnel design, testimonials, content quality |
-| **Marketplace** | Two-sided messaging, buyer/seller flows, listing pages | Supply/demand balance, trust mechanisms, network effects |
+| **B2B SaaS / FinTech Spend Management (Moss)** | Germany-founded European spend management platform for SMB and mid-market finance teams; core product spans cards, accounts payable, reimbursements, approvals, budgeting/controlling, procurement, accounting automation, bank transfers, and integrations; primary buyers are CFOs, Finance Managers, Accountants, Controllers, and budget owners | Demo-to-pipeline conversion, free-start-to-activation conversion, clarity of product modules, finance pain-point relevance, trust/regulatory proof, integration-led differentiation, localization performance, and faster month-end / better control messaging |
 
 ### 1.3 Identify Key Pages
 
-Map the site architecture to identify:
-- Homepage
+Map the Moss site architecture to identify:
+- Homepage / locale homepage
 - Primary landing pages
-- Pricing page (if exists)
+- Pricing page
+- Product Overview
 - Product/feature pages
+- Integrations page(s)
+- Customers / case studies page(s)
 - About/team page
-- Blog/content hub
-- Contact/signup/trial page
-- Legal pages (privacy, terms)
+- Security / trust / legal pages
+- Finance Guide / content hub
+- Contact / Book an intro / Get started for free page or flow
 
 Store this page map for all subagents to reference.
+
+Also hardcode the Moss commercial context so no subagent has to infer it:
+- **Company:** Moss is a German-founded European spend management company.
+- **Core product promise:** simplify finance operations by unifying cards, invoices, reimbursements, approvals, and accounting automation.
+- **Current module set:** Product Overview, Corporate Cards, Employee Reimbursements, Accounts Payable, Procurement, Advanced Controlling, Advanced Accounting, Bank Transfers, Apple Pay, Moss Intelligence, and Integrations.
+- **Default acquisition CTAs:** `Book an intro` and `Get started for free`.
+- **Primary ICP:** companies with roughly 30–250 employees and meaningful indirect spend; especially finance-heavy SMBs and mid-market companies such as agencies, professional services firms, and IT resellers.
+- **Primary personas:** CFO, Finance Manager, Accountant, Controller, and department or budget owners involved in approvals and spend governance.
+- **Brand voice:** clear, direct, modern, operational, trustworthy, low-hype, finance-native, and outcome-led.
+- **Core proof themes:** spend control, faster month-end, accounting automation, regulatory/security trust, ease of use, customer service, and European market credibility.
+- **Primary default competitor set:** Payhawk, Spendesk, and Pleo. Use SAP Concur and legacy fragmented finance tooling as secondary comparison points when relevant.
 
 ---
 
 ## Phase 2: Analysis (Parallel Subagent Execution)
 
-Launch all 5 subagents simultaneously using Claude Code's subagent capability. Each subagent receives the business type, page map, and fetched content.
+Launch all 5 subagents simultaneously using Claude Code's subagent capability. Each subagent receives the Moss business type, page map, and fetched content.
 
 ### Subagent 1: market-content
 
-**Focus:** Content quality, messaging clarity, copy effectiveness
+**Focus:** Moss content quality, messaging clarity, copy effectiveness
 
 Evaluates:
-- Headline clarity and specificity (does it pass the 5-second test?)
-- Value proposition strength (is the unique value immediately obvious?)
-- Body copy persuasion (does it speak to pain points and desired outcomes?)
-- Social proof quality (testimonials, logos, case studies, numbers)
-- Content depth and authority (blog quality, thought leadership)
-- Brand voice consistency across pages
+- Headline clarity and specificity for Moss’s finance audience (does it immediately communicate what Moss does and for whom?)
+- Value proposition strength (is the unique Moss value immediately obvious: control, automation, speed, and simplification?)
+- Body copy persuasion (does it speak to CFO / finance manager / accountant pain points and desired outcomes?)
+- Role-based relevance (does the page speak appropriately to decision-makers vs end users?)
+- Social proof quality (customer logos, quantified outcomes, awards, trust markers, regulatory proof)
+- Content depth and authority (Finance Guide quality, category education, integration clarity, implementation clarity)
+- Brand voice consistency across pages and locales
 
 **Scores:** Content & Messaging (0-100)
 
 ### Subagent 2: market-conversion
 
-**Focus:** CRO, funnels, landing pages, signup flows
+**Focus:** CRO, funnels, landing pages, signup/demo flows
 
 Evaluates:
-- CTA effectiveness (clarity, placement, contrast, urgency)
-- Form friction (number of fields, progressive disclosure, inline validation)
-- Page layout and visual hierarchy (does the eye flow toward conversion?)
-- Trust signals near conversion points (guarantees, security badges, testimonials)
+- CTA effectiveness between `Book an intro` and `Get started for free`
+- Clarity of next step (self-serve, sales-assisted, product tour, or hybrid path)
+- Form friction (number of fields, progressive disclosure, qualification logic, perceived effort)
+- Page layout and visual hierarchy (does the eye flow toward the primary Moss CTA?)
+- Trust signals near conversion points (security, regulation, testimonials, integration proof, customer results)
 - Mobile conversion experience
-- Signup/checkout flow steps and drop-off risk
-- Pricing page effectiveness (anchoring, packaging, FAQ)
+- Locale-specific conversion experience
+- Pricing / packaging effectiveness (base packages, add-ons, “pay as you grow,” clarity of what is included)
+- Demo / intro / free-start flow steps and drop-off risk
 
 **Scores:** Conversion Optimization (0-100)
 
 ### Subagent 3: market-competitive
 
-**Focus:** Competitive positioning, market landscape
+**Focus:** Moss competitive positioning, market landscape
 
 Evaluates:
-- Unique positioning clarity (how differentiated is the messaging?)
-- Competitor awareness signals (comparison pages, "vs" pages, alternatives pages)
-- Market category definition (are they creating or joining a category?)
-- Pricing relative to likely competitors
-- Feature differentiation signals
-- Review/reputation presence on third-party sites
+- Unique positioning clarity versus Payhawk, Spendesk, and Pleo
+- Whether Moss clearly differentiates on control, accounting automation, unified workflows, integrations, and European trust
+- Market category definition (spend management, AP automation, expense management, procurement, finance automation)
+- Pricing and packaging clarity relative to likely alternatives
+- Feature differentiation signals by module
+- Review / reputation presence and proof signals
+- Whether Moss creates a compelling reason to switch from fragmented finance tools or incumbent legacy suites
 
 **Scores:** Competitive Positioning (0-100)
 
@@ -98,14 +121,15 @@ Evaluates:
 
 Evaluates:
 - Title tags, meta descriptions, header hierarchy
-- URL structure and internal linking
+- URL structure, internal linking, and locale structure
 - Image optimization (alt tags, file sizes, modern formats)
 - Mobile responsiveness
 - Page load speed indicators (DOM size, resource count, render-blocking)
 - Schema markup / structured data
 - Sitemap and robots.txt
 - Core Web Vitals signals (where detectable)
-- Accessibility basics (contrast, form labels, skip navigation)
+- Accessibility basics (contrast, form labels, keyboard flows, skip navigation)
+- Technical readiness for ranking core Moss commercial and category-intent pages
 
 **Scores:** SEO & Discoverability (0-100)
 
@@ -115,12 +139,12 @@ Evaluates:
 
 Evaluates:
 - Business model clarity
-- Pricing strategy (value-based, competitor-based, cost-plus)
-- Growth loops (referral, viral, content, sales-led)
-- Retention signals (loyalty programs, community, email nurture)
-- Expansion revenue opportunities (upsells, cross-sells, tiers)
-- Market timing and trends alignment
-- Brand trust signals (about page, team, mission, social proof depth)
+- Packaging and pricing strategy (base packages, add-ons, modular upsell logic, self-serve vs sales-led motion)
+- Growth loops relevant to Moss (content-to-demo, integration-led acquisition, customer story credibility, category education, referral and partner leverage)
+- Retention / expansion signals (cross-module adoption, accounting and ERP stickiness, role expansion, procurement / controlling add-ons)
+- Localization and market expansion readiness
+- Brand trust signals (about page, company maturity, security, regulation, customer proof depth)
+- Whether Moss’s site clearly communicates why finance teams should consolidate spend workflows with one platform
 
 **Scores:** Brand & Trust (0-100), Growth & Strategy (0-100)
 
@@ -157,54 +181,55 @@ Marketing Score = (
 Collect all recommendations from subagents and classify them:
 
 **Quick Wins** (implement in < 1 week, low effort, high impact):
-- Copy changes to headlines and CTAs
-- Adding missing meta descriptions
-- Adding trust signals near CTAs
-- Fixing broken links or images
-- Adding urgency or social proof
+- Clarify hero messaging around finance complexity, control, and month-end outcomes
+- Tighten CTA copy / hierarchy between `Book an intro` and `Get started for free`
+- Add missing trust signals near forms and CTAs
+- Improve proof density with quantified customer outcomes
+- Fix internal linking, metadata, or content clarity issues on key module pages
 
 **Strategic Recommendations** (1-4 weeks, medium effort, high impact):
-- Redesigning pricing page
-- Building comparison/alternatives pages
-- Creating lead magnets or content upgrades
-- Email sequence implementation
-- Landing page A/B test designs
+- Rework pricing / packaging communication for modular product adoption
+- Build sharper comparison / alternatives pages versus Payhawk, Spendesk, and Pleo
+- Create role-specific landing pages for CFOs, Finance Managers, Accountants, and Controllers
+- Expand integration-led and use-case-led landing pages
+- Design and prioritize Moss A/B test concepts for hero, proof, CTA, pricing, and navigation patterns
 
 **Long-Term Initiatives** (1-3 months, high effort, transformative impact):
-- Content marketing strategy overhaul
-- SEO content gap campaign
-- Funnel redesign
-- Brand repositioning
-- New growth channel development
+- Overhaul category education and SEO content strategy around spend management, AP automation, procurement, and accounting automation
+- Redesign core funnel paths by intent (sales-led, self-serve, product-tour, partner-led)
+- Reposition modules and bundles to increase cross-sell / expansion clarity
+- Strengthen multi-locale growth architecture and message consistency
+- Build a durable experimentation roadmap aligned to revenue, activation, and pipeline goals
 
 ### 3.3 Revenue Impact Estimates
 
-For each recommendation, estimate the revenue impact:
+For each recommendation, estimate the revenue impact in a way that matches Moss’s lead-generation and SaaS sales model:
 
 ```
 Revenue Impact Formula:
-  Current Monthly Traffic x Conversion Rate Improvement x Average Deal Value
+  Qualified Monthly Traffic x Conversion Rate Improvement x Lead-to-Close Rate x Average Contract Value
   = Estimated Monthly Revenue Lift
 
 Example:
-  10,000 visitors x 0.5% conversion lift x $99 ARPU = $4,950/month
+  10,000 visitors x 0.5% conversion lift x 8% lead-to-close x €6,000 ACV
+  = €24,000/month
 ```
 
 Provide conservative, moderate, and aggressive estimates where possible. Use these qualifiers:
 
 | Impact Level | Monthly Revenue Lift | Confidence |
 |-------------|---------------------|------------|
-| High Impact | >$5,000/mo or >20% improvement | Based on clear evidence from audit |
-| Medium Impact | $1,000-$5,000/mo or 5-20% improvement | Based on industry benchmarks |
-| Low Impact | <$1,000/mo or <5% improvement | Incremental optimization |
+| High Impact | >€25,000/mo or >20% improvement | Based on clear Moss-specific evidence from audit |
+| Medium Impact | €5,000-€25,000/mo or 5-20% improvement | Based on benchmarked SaaS/CRO patterns |
+| Low Impact | <€5,000/mo or <5% improvement | Incremental optimization |
 
 ### 3.4 Competitor Comparison Table
 
-If the competitive subagent identified competitors, include a comparison:
+If the competitive subagent identified competitors, include a Moss comparison:
 
 ```markdown
-| Factor | [Target] | Competitor A | Competitor B | Competitor C |
-|--------|----------|-------------|-------------|-------------|
+| Factor | Moss | Payhawk | Spendesk | Pleo |
+|--------|------|----------|----------|------|
 | Headline Clarity | 6/10 | 8/10 | 5/10 | 7/10 |
 | Value Prop Strength | 5/10 | 7/10 | 6/10 | 8/10 |
 | Trust Signals | 7/10 | 9/10 | 4/10 | 6/10 |
@@ -358,13 +383,16 @@ Full report saved to: MARKETING-AUDIT.md
 ## Error Handling
 
 - If the URL is unreachable, report the error and suggest checking the URL
+- If the URL is not a Moss-owned page, note that the audit framework is Moss-calibrated and benchmark the page against Moss’s positioning, ICP, and conversion goals
 - If a subagent fails, continue with remaining subagents and note the gap in the report
 - If the site is behind authentication, note what was accessible and recommend manual review for gated content
 - If the site has very little content (single page), adapt the analysis accordingly and note limited scope
+- If the target is a locale page, explicitly note whether the issues are locale-specific or system-wide across Moss
 
 ## Cross-Skill Integration
 
-- If `COMPETITOR-REPORT.md` exists in the current directory, incorporate its findings
-- If `BRAND-VOICE.md` exists, use it to contextualize content analysis
+- If `COMPETITOR-REPORT.md` exists in the current directory, incorporate its findings and prioritize Moss’s default competitor set: Payhawk, Spendesk, and Pleo
+- If `BRAND-VOICE.md` exists, use it to contextualize content analysis against Moss’s direct, trustworthy, finance-native tone
+- If `moss_spa_ab_testing.md` exists, use it to flag technical feasibility and implementation complexity for any recommended experiment on the Moss website
 - Reference other available analyses in the executive summary
 - Suggest follow-up commands: `/market copy`, `/market funnel`, `/market competitors` for deeper dives

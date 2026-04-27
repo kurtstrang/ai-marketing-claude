@@ -1,326 +1,338 @@
 # Product/Service Launch Playbook Generator
 
 ## Skill Purpose
-Generate a complete, week-by-week launch playbook for any product, service, or feature launch. This skill produces a tactical plan with templates, checklists, email sequences, social posts, and metrics tracking -- everything needed to execute a successful launch.
+Generate a complete, week-by-week launch playbook for Moss product, feature, integration, content asset, event, or market launches. This skill is Moss-specific by default. Assume Moss is a spend management platform from Germany for companies with roughly 30-250 employees and high indirect spend, helping finance teams manage company spending with corporate cards, invoice management, reimbursements, approvals, budget control, accounting automation, integrations, and spend visibility. This skill produces a tactical plan with templates, checklists, email sequences, launch posts, and metrics tracking -- everything needed to execute a successful Moss launch.
 
 ## When to Use
-- User is planning to launch a new product, service, feature, or offering
-- User asks for a launch plan, go-to-market strategy, or launch checklist
-- User wants to coordinate a multi-channel launch campaign
+- User is planning to launch a Moss product, module, feature, integration, report, event, webinar, campaign, or market entry
+- User asks for a launch plan, go-to-market strategy, or launch checklist for Moss
+- User wants to coordinate a multi-channel Moss launch campaign
 - Triggered by `/market launch` or `/market launch <product description>`
 
 ## How to Execute
 
 ### Step 1: Gather Launch Context
+Before generating the playbook, do **not** ask the user to discover Moss's audience, positioning, or brand voice. Assume the following Moss context by default:
+
+- **Company**: Moss is a spend management platform for medium-sized businesses, with strong relevance for finance-led buying decisions.
+- **Primary audience**: CFOs, Heads of Finance, Finance Managers, Controllers, Accountants, and founders/operations leaders at companies with 30-250 employees and meaningful indirect spend.
+- **Secondary audience**: Accounting firms, finance consultants, software/integration partners, private equity operating teams, and internal champions such as office managers or team leads involved in spend workflows.
+- **Core product pillars**: corporate cards, invoice management / accounts payable, reimbursements, approval workflows, budget control, accounting automation, ERP/accounting/HR integrations, and spend visibility.
+- **Primary value proposition**: more visibility and control before spend happens, less manual work after spend happens, faster and cleaner month-end, and one platform instead of a fragmented finance stack.
+- **Brand voice**: clear, credible, practical, modern, finance-literate, outcome-led, and low-hype. Write like a strong product marketer for finance professionals, not like a consumer social brand. Avoid fluffy claims and empty superlatives.
+- **Default proof assets**: customer stories, product demos, product announcement pages, webinar recordings, The Modern CFO content, Finance Guide content, integration pages, partner pages, awards/reviews, and quantified operational outcomes.
+- **Primary launch channels that fit Moss best**: email, LinkedIn, webinars/live demos, customer stories, partner co-marketing, sales enablement, product/feature landing pages, paid search, retargeting, and selective paid LinkedIn. Do not default to TikTok, broad consumer social tactics, or entertainment-led launch strategies.
+
 Before generating the playbook, collect these inputs from the user (ask if not provided):
 
-1. **What are you launching?** (product, service, feature, course, event)
-2. **Who is the target audience?** (demographics, pain points, existing list size)
-3. **What is the primary launch goal?** (revenue target, signups, downloads, awareness)
+1. **What are you launching?** (feature, module, integration, report, event, webinar, market launch, partner offer)
+2. **Which Moss audience is this for?** (CFO, finance lead, controller, accountant, founder, office manager, accounting partner, consultant, PE operating team)
+3. **What is the primary launch goal?** (pipeline target, booked demos, self-serve starts, partner-sourced leads, feature adoption, expansion, awareness)
 4. **What is the launch date?** (or desired timeline)
-5. **What channels do you have access to?** (email list size, social following, ad budget, partnerships)
-6. **What is the price point?** (if applicable)
-7. **Do you have existing customers/users?** (for beta, testimonials, case studies)
-8. **What is the budget?** (bootstrapped, moderate, well-funded)
+5. **Which markets and locales are involved?** (EU default, or country/locale-specific such as DE, NL, UK, English, German, Dutch)
+6. **What channels do you have access to?** (email database, LinkedIn reach, webinar capability, partner channels, paid budget, customer proof, sales team, lifecycle CRM)
+7. **Is this for prospects, existing customers, partners, or a mix?**
+8. **What proof do you already have?** (customer quotes, ROI data, screenshots, demo environment, product update notes, integration logos, partner commitments)
 
 ### Step 2: Determine Launch Type
 Select the primary launch strategy based on the user's context:
 
 | Launch Type | Best For | Key Channel | Timeline |
 |---|---|---|---|
-| Product Hunt | SaaS, dev tools, consumer apps | Product Hunt + Twitter/X | 4-6 weeks prep |
-| Email List Launch | Course, info product, SaaS with existing list | Email | 6-8 weeks |
-| Social Media Launch | Consumer product, personal brand | Twitter/X, LinkedIn, Instagram | 4-6 weeks |
-| Paid Ads Launch | E-commerce, established product | Facebook/Google Ads | 2-4 weeks prep |
-| Community Launch | Niche product, developer tools | Reddit, Discord, Slack communities | 6-8 weeks |
-| Partner Launch | B2B, enterprise, marketplace | Partner channels | 8-12 weeks |
-| Hybrid Launch | Any high-stakes launch | Multi-channel coordinated | 8-12 weeks |
+| Customer Adoption Launch | Net-new features, workflow upgrades, module adoption, expansion motions | Lifecycle email + in-product/customer comms + webinars | 3-6 weeks prep |
+| Webinar-Led Launch | Product showcases, feature bundles, educational launches, research-led launches | Webinar + email + LinkedIn | 4-6 weeks |
+| LinkedIn Thought Leadership Launch | Category education, reports, POV pieces, finance leadership narratives | LinkedIn + email + content hub | 4-6 weeks |
+| Demand Capture Launch | High-intent product, integration, or feature launches with clear buying demand | Paid search + landing pages + retargeting | 2-4 weeks prep |
+| Partner Launch | ERP, accounting, HR, banking, affiliate, or advisor launches | Partner channels + co-marketing + email | 6-10 weeks |
+| Customer Proof Launch | Case studies, ROI stories, vertical proof, competitive replacement narratives | Customer stories + sales enablement + LinkedIn | 4-6 weeks |
+| Hybrid Launch | Any strategic Moss launch across multiple markets or teams | Email + LinkedIn + webinar + partner + paid retargeting | 6-10 weeks |
 
 ### Step 3: Generate the 8-Week Launch Timeline
 
 #### Weeks 1-2: Foundation
-**Objective:** Lock in positioning, build assets, set up infrastructure.
+**Objective:** Lock in Moss positioning, proof, assets, and launch infrastructure.
 
 **Tasks:**
-- [ ] Define launch positioning statement: "For [TARGET] who [PROBLEM], [PRODUCT] is a [CATEGORY] that [KEY BENEFIT]. Unlike [ALTERNATIVE], we [DIFFERENTIATOR]."
-- [ ] Create launch one-pager (internal alignment doc)
-- [ ] Set up landing page / waitlist page
-- [ ] Set up analytics and tracking (UTM parameters, conversion goals, event tracking)
-- [ ] Create launch-specific email list/segment
+- [ ] Define launch positioning statement: "For [MOSS PERSONA] at [COMPANY TYPE] who need [FINANCE / SPEND MANAGEMENT JOB], [LAUNCH ITEM] helps them [PRIMARY OUTCOME]. Unlike [FRAGMENTED STACK / CURRENT WORKAROUND / ALTERNATIVE], Moss [KEY DIFFERENTIATOR]."
+- [ ] Create a Moss launch one-pager (internal alignment doc) covering audience, value proposition, objections, proof, availability, and owner responsibilities
+- [ ] Set up the landing page / feature page / webinar page in the correct locale(s)
+- [ ] Set up analytics and tracking (UTM parameters, funnel events, conversion goals, CRM attribution, pipeline tracking)
+- [ ] Create launch-specific segments for prospects, customers, partners, open opportunities, and internal enablement
 - [ ] Draft all email sequences (see Email Templates below)
-- [ ] Brief design team on visual assets needed
-- [ ] Identify 10-20 potential beta testers or early access users
-- [ ] Research and list 20+ communities, forums, and groups where target audience gathers
-- [ ] Set up social media content calendar tool
+- [ ] Brief product marketing, design, lifecycle, sales, partnerships, and paid teams on launch messaging and deliverables
+- [ ] Identify 5-10 beta users, design partners, customer references, or strong-fit proof sources
+- [ ] Gather proof assets: screenshots, customer quotes, quantified outcomes, integration logos, award badges, demo environment
+- [ ] Set up the LinkedIn, email, webinar, and sales enablement calendar
 
 **Deliverables:**
-- Positioning statement
-- Landing page live
+- Moss positioning statement
+- Landing page or launch page live
 - Email sequences drafted
-- Beta tester list
+- Proof asset list and launch narrative signed off
 
 #### Weeks 3-4: Audience Building
-**Objective:** Build anticipation, grow waitlist, recruit beta testers.
+**Objective:** Build anticipation, seed the launch narrative, and gather proof.
 
 **Tasks:**
-- [ ] Begin content seeding: publish 2-3 blog posts / threads related to the problem you solve
-- [ ] Share behind-the-scenes content on social media (building in public)
-- [ ] Start engaging in target communities (provide value, don't pitch yet)
-- [ ] Reach out to beta testers with personal invitations
-- [ ] Collect early feedback and testimonials from beta users
-- [ ] Begin influencer/partner outreach (see Partner Coordination below)
-- [ ] Set up referral mechanism for waitlist (e.g., viral waitlist with rewards)
-- [ ] Create teaser content (sneak peeks, countdowns, problem-awareness posts)
-- [ ] Record demo video or product walkthrough
-- [ ] Write press release or media pitch (if relevant)
+- [ ] Publish 2-3 Moss content assets related to the problem the launch solves (Finance Guide article, Magazine post, The Modern CFO asset, customer story, or webinar registration page)
+- [ ] Start LinkedIn seeding from company and employee profiles focused on the finance problem, operational pain, or strategic opportunity
+- [ ] Begin targeted outreach to reference customers, beta users, prospects, or partners depending on launch type
+- [ ] Collect early feedback and sharp proof points from beta users or internal dogfooding
+- [ ] Begin partner/accounting-firm/integration outreach if the launch has an ecosystem angle
+- [ ] Create teaser content (before/after workflow, hidden cost of current process, control gap, month-end friction, integration story)
+- [ ] Record a concise product walkthrough, demo clip, or webinar teaser
+- [ ] Prepare sales enablement assets: talk track, FAQ, objection handling, competitive framing, and follow-up sequence
+- [ ] Build a remarketing audience if paid media is part of the launch
+- [ ] Draft a finance/trade media pitch if the launch is market-relevant, data-led, or strategically notable
 
 **Content Calendar (Weeks 3-4):**
 | Day | Content Type | Channel | Theme |
 |---|---|---|---|
-| Mon | Problem-awareness post | LinkedIn/Twitter | Why this problem matters |
-| Tue | Behind-the-scenes | Instagram/Twitter | Show what you're building |
-| Wed | Educational content | Blog/LinkedIn | Teach something related to your space |
-| Thu | Social proof | Twitter/LinkedIn | Beta tester quote or result |
-| Fri | Teaser/countdown | All channels | Build anticipation for launch |
+| Mon | Problem-reframing post | LinkedIn | Why this finance/spend problem matters now |
+| Tue | Product walkthrough or teaser clip | LinkedIn/YouTube/Email | Show the workflow, not just the feature |
+| Wed | Educational content | Finance Guide/Magazine/LinkedIn | Teach the finance operator something useful |
+| Thu | Customer proof | LinkedIn/Email/Sales | Time saved, control gained, costs reduced |
+| Fri | Launch teaser / webinar invite | LinkedIn/Email/Partners | Build anticipation and registrations |
 
 **Deliverables:**
 - 4-6 content pieces published
-- Beta testers onboarded and providing feedback
-- Waitlist growing
-- Partner/influencer commitments secured
+- Beta users / reference customers / internal stakeholders aligned
+- Launch audience warming up
+- Partner or customer proof commitments secured
 
 #### Weeks 5-6: Pre-Launch Intensification
-**Objective:** Maximize anticipation, finalize assets, prep launch infrastructure.
+**Objective:** Maximize anticipation, finalize assets, and prep all Moss teams for launch.
 
 **Tasks:**
-- [ ] Send pre-launch email sequence to waitlist (see Email Templates)
-- [ ] Increase social media posting frequency to daily
-- [ ] Publish case study or results from beta testers
-- [ ] Finalize pricing and offer structure
-- [ ] Create launch-day content package (all posts, emails, and graphics ready)
-- [ ] Brief partners/affiliates on launch plan and provide swipe copy
-- [ ] Set up live chat or support for launch day
-- [ ] Test all purchase/signup flows end-to-end
-- [ ] Prepare FAQ document for support team
-- [ ] Create urgency mechanism (early bird pricing, limited spots, bonus expiration)
-- [ ] Rehearse launch day by walking through every step
-- [ ] Set up real-time dashboard for launch metrics
+- [ ] Send pre-launch email sequence to the relevant Moss audience segments (see Email Templates)
+- [ ] Increase LinkedIn posting frequency and coordinate employee amplification
+- [ ] Publish or finalize a customer story, benchmark insight, ROI proof, or integration proof piece
+- [ ] Finalize pricing, packaging, eligibility, beta access, or rollout logic
+- [ ] Create launch-day content package (landing page copy, emails, LinkedIn posts, webinar deck, paid assets, sales snippets, partner copy)
+- [ ] Brief partners, affiliates, and accounting/advisor channels on the launch and give them ready-to-use materials
+- [ ] Set up live demo, office hours, webinar, or launch Q&A for prospects/customers
+- [ ] Test all demo request / get-started / booking / registration flows end-to-end
+- [ ] Prepare FAQ document for sales, success, and support
+- [ ] Create an authentic urgency mechanism (limited beta access, launch webinar, temporary implementation support, early access, launch week meeting slots)
+- [ ] Rehearse launch day by walking through every internal and external touchpoint
+- [ ] Set up a real-time dashboard for launch metrics and pipeline visibility
 
 **Deliverables:**
 - All launch assets finalized and scheduled
-- Partners briefed and ready
-- Checkout/signup flow tested
-- Support team prepared
+- Partners and internal teams briefed and ready
+- Conversion flow tested
+- Sales/support/customer success prepared
 
 #### Week 7: LAUNCH WEEK
-**Objective:** Execute the launch with maximum impact and coordinated effort.
+**Objective:** Execute the launch with maximum clarity, proof, and internal alignment.
 
 **Day-by-Day Breakdown:**
 
-**Monday - Soft Launch / VIP Access:**
-- Send early access email to VIPs, beta testers, and top waitlist members
-- Post on social: "We're live for our early supporters"
-- Collect first-day feedback and testimonials
-- Monitor for bugs and issues
-- Goal: First 50-100 users/customers
+**Monday - Soft Launch / Internal + Priority Audience Access:**
+- Enable the sales team, customer success team, and key internal stakeholders
+- Send early access or priority invite to beta users, top prospects, or existing customers depending on launch type
+- Share launch-ready assets internally: one-pager, snippets, decks, objections, CTA guidance
+- Collect first-day feedback, friction points, and strong quotes
+- Goal: Internal readiness and early proof
 
 **Tuesday - Public Announcement:**
-- Send main launch email to full list
-- Publish launch blog post
-- Post launch announcement on all social channels
-- Submit to Product Hunt (if applicable -- schedule for 12:01 AM PT)
-- Activate partner/affiliate promotions
-- Begin paid ad campaigns (if applicable)
-- Goal: Maximum visibility and traffic
+- Send main launch email to the relevant list(s)
+- Publish the launch landing page, blog/article, or event page
+- Post launch announcement on Moss's primary channels, especially LinkedIn
+- Activate partner/affiliate/accounting/advisor promotions if relevant
+- Turn on paid search / retargeting / LinkedIn campaigns if part of the plan
+- Goal: Maximum relevant visibility and demo / registration / start volume
 
 **Wednesday - Social Proof Push:**
-- Share first customer testimonials and results
-- Repost/retweet customer reactions
-- Send "look what people are saying" email
-- Post in communities (with genuine value, not spam)
-- Respond to every comment, mention, and question
-- Goal: Build momentum through social proof
+- Share first customer reactions, beta proof, or operational outcomes
+- Repurpose comments, feedback, and quotes into launch assets
+- Send "here's what finance teams are seeing" email
+- Arm sales with fresh proof and new conversation starters
+- Goal: Build momentum through proof and relevance
 
 **Thursday - Objection Handling:**
-- Publish FAQ or "everything you need to know" post
-- Send email addressing top 3 objections
-- Host live Q&A or AMA (Twitter Space, LinkedIn Live, webinar)
-- Share comparison content (why this vs alternatives)
-- Goal: Convert fence-sitters
+- Publish FAQ or "what finance teams need to know" content
+- Send email addressing top 3 objections (implementation effort, integration fit, rollout risk, pricing/packaging, change management)
+- Host live Q&A, webinar, or demo session
+- Share comparison content against current workflows, manual processes, or fragmented tools
+- Goal: Convert fence-sitters and unblock internal champions
 
 **Friday - Urgency and Scarcity:**
-- Send "early bird pricing ends soon" email
-- Post countdown content on social
-- Share final testimonials and case studies
-- Activate scarcity mechanisms (limited spots, bonus expires)
-- Goal: Drive final wave of conversions
+- Send "last call" email tied to a real deadline (webinar registration, beta access, launch office hours, launch support window)
+- Post reminder content on LinkedIn
+- Share final proof points and strongest objections overcome
+- Route high-intent responses directly to sales / success / onboarding
+- Goal: Drive the final wave of conversions and meetings
 
 **Saturday/Sunday - Wrap Up:**
-- Send "last chance" email for any time-limited offers
+- Send "last chance" email if there is a real time-bound reason
 - Compile launch week results
-- Thank early customers publicly
-- Begin post-launch content planning
+- Thank customers, partners, and internal teams
+- Begin post-launch nurture, onboarding, or follow-up content planning
 
 #### Week 8: Post-Launch
-**Objective:** Maintain momentum, collect feedback, plan next iteration.
+**Objective:** Maintain momentum, turn interest into adoption or pipeline, and capture learnings.
 
 **Tasks:**
-- [ ] Send post-launch survey to new customers
+- [ ] Send post-launch survey to new customers, webinar attendees, or new leads
 - [ ] Compile and analyze launch metrics (see Metrics section)
 - [ ] Write launch retrospective (what worked, what didn't, what to change)
-- [ ] Transition from launch pricing to regular pricing
-- [ ] Set up onboarding email sequence for new customers
-- [ ] Plan next content calendar based on launch learnings
-- [ ] Follow up with media contacts and partners with results
-- [ ] Identify top customers for case studies
-- [ ] Begin planning v2 features based on feedback
-- [ ] Set up ongoing marketing engine (content, ads, email nurture)
+- [ ] Transition from launch week messaging into evergreen nurture or adoption messaging
+- [ ] Set up onboarding / adoption / sales follow-up sequence depending on the launch type
+- [ ] Plan the next content calendar based on launch learnings and questions raised during launch week
+- [ ] Follow up with media contacts, partners, affiliates, and customer references with results
+- [ ] Identify top launch responders for case studies, reference calls, or sales collateral
+- [ ] Feed product, lifecycle, and sales insights back into future Moss campaigns
+- [ ] Set up ongoing demand generation and nurture around the launched asset
 
 ### Step 4: Email Sequence Templates
 
 #### Pre-Launch Sequence (Weeks 5-6)
 
 **Email 1: The Teaser (2 weeks before)**
-Subject: Something big is coming...
+Subject: A smarter way to [FINANCE OUTCOME] is coming
 Purpose: Build anticipation
-Content: Hint at the product, share the problem it solves, tease the launch date. Don't reveal everything.
-CTA: "Stay tuned" or "Make sure you're on the list"
+Content: Introduce the pain or operational bottleneck. Show that Moss understands the workflow problem. Hint at the solution and who it is built for.
+CTA: "Stay tuned" or "Join the waitlist / register for the reveal"
 
 **Email 2: The Reveal (1 week before)**
-Subject: Here's what we've been building
-Purpose: Show the product, build desire
-Content: Reveal the product with screenshots/video. Share beta tester results. Announce launch date and any early bird offer.
-CTA: "Mark your calendar" or "Get notified on launch day"
+Subject: Here’s what Moss built for finance teams
+Purpose: Show the launch item, create relevance
+Content: Reveal the feature / module / webinar / integration with screenshots or demo clips. Explain the workflow improvement, rollout scope, and who benefits most.
+CTA: "Book the demo" / "Register for the webinar" / "See how it works"
 
 **Email 3: The Social Proof (3 days before)**
-Subject: "[Beta Tester Name] got [Result] in [Timeframe]"
+Subject: How [CUSTOMER / TEAM TYPE] solved [PAIN] faster
 Purpose: Prove it works
-Content: Feature 2-3 beta tester testimonials with specific results. Address the "does this actually work?" objection.
-CTA: "Be ready for [launch day]"
+Content: Share 2-3 proof points with concrete outcomes such as reduced admin time, better approvals, faster month-end, stronger visibility, or easier accounting handoff.
+CTA: "See it in action on [LAUNCH DAY]"
 
 #### Launch Sequence (Week 7)
 
 **Email 4: The Launch (Day 1)**
-Subject: It's live -- [Product Name] is here
+Subject: It’s live -- [LAUNCH NAME] is here
 Purpose: Drive immediate action
-Content: Announce the launch. State the offer clearly. Include early bird pricing or bonus. Link directly to purchase/signup.
-CTA: "Get [Product] now" with primary button
+Content: Announce the launch clearly. State who it is for, what problem it solves, and what the next step is. Keep the CTA singular and explicit.
+CTA: "Book a demo" / "Get started" / "Register now" / "Explore the feature"
 
 **Email 5: The Social Proof Follow-Up (Day 3)**
-Subject: People are already seeing results
-Purpose: Convert through social proof
-Content: Share first-customer testimonials, screenshots of reactions, usage stats. Create FOMO.
-CTA: "Join [X] others who already [outcome]"
+Subject: Finance teams are already seeing the difference
+Purpose: Convert through proof
+Content: Share first reactions, demo feedback, implementation ease, customer proof, or strong launch metrics. Emphasize operational outcomes and credibility.
+CTA: "See why teams are moving now"
 
 **Email 6: The Objection Handler (Day 4)**
-Subject: "But what if [common objection]?"
+Subject: What about [COMMON OBJECTION]?
 Purpose: Address hesitations
-Content: List and answer top 3-5 objections. Include guarantee/risk reversal. Share FAQ.
-CTA: "Try it risk-free"
+Content: Answer the most important objections: fit, implementation, integrations, risk, rollout effort, or internal buy-in. Include FAQ and proof where possible.
+CTA: "See how it fits your setup"
 
 **Email 7: The Urgency Close (Day 5-7)**
-Subject: [X hours] left for [early bird / bonus / discount]
+Subject: Last chance for [WEBINAR / EARLY ACCESS / LAUNCH SUPPORT WINDOW]
 Purpose: Drive final conversions with urgency
-Content: Remind of the deadline. Recap the value. Final testimonial. Clear, single CTA.
-CTA: "Last chance to get [offer]"
+Content: Remind of the real deadline. Recap the outcome, the proof, and the next step. Keep the message direct and operationally credible.
+CTA: "Save my spot" / "Book my intro" / "Start now"
 
 ### Step 5: Social Media Launch Posts
 
-#### Twitter/X Thread Template:
+#### LinkedIn Exec / Founder Post Template:
 ```
-Post 1: After [X months/weeks] of building, I'm thrilled to announce [Product Name] is live.
+We just launched [Launch Name] at Moss, built for [target finance persona].
 
-[Product] helps [target audience] [achieve outcome] without [pain point].
+Why this matters:
 
-Here's the story of why I built it (and what it can do for you):
+[1-2 sentences on the finance or spend-management problem]
 
-[Thread emoji] 1/
+We kept hearing the same friction:
+- [Pain point 1]
+- [Pain point 2]
+- [Pain point 3]
 
-Post 2: The problem: [Describe the problem in detail. Make it relatable.]
+So we built [Launch Name] to help teams [specific outcome].
 
-Post 3: The solution: [What your product does, in simple terms. Include screenshot or demo GIF.]
+What it changes:
+- [Workflow improvement 1]
+- [Workflow improvement 2]
+- [Workflow improvement 3]
 
-Post 4: Early results: [Beta tester results, specific numbers]
-
-Post 5: What's included: [Key features as bullet points]
-
-Post 6: Special launch offer: [Pricing, early bird deal, bonus]
-
-Post 7: Try it now: [Link] [CTA]
-```
-
-#### LinkedIn Post Template:
-```
-I just launched [Product Name], and here's why it matters:
-
-[1-2 sentences about the problem]
-
-After [talking to X customers / spending Y months building / experiencing this problem myself], I realized [insight].
-
-So I built [Product Name] to [specific outcome].
-
-Early users are already seeing:
-- [Result 1]
-- [Result 2]
-- [Result 3]
-
-If you [target audience descriptor], I'd love for you to check it out:
+If you’re a [target audience descriptor] trying to [core job-to-be-done], this is for you:
 [Link]
 
-Special launch pricing available for the next [timeframe].
-
-#relevant #hashtags
+[Optional webinar / demo / launch CTA]
 ```
 
-#### Instagram / Visual Platform Template:
+#### LinkedIn Company Page Post Template:
 ```
-Image/Carousel: Product screenshots, before/after, or results graphic
+Finance teams need more than another disconnected tool.
+
+That’s why Moss just launched [Launch Name].
+
+Built for [target persona], it helps teams:
+- [Outcome 1]
+- [Outcome 2]
+- [Outcome 3]
+
+Why now:
+[1-2 sentences on category context, workflow pain, regulation, efficiency pressure, or growth challenge]
+
+Proof:
+[Customer / beta / benchmark / internal proof point]
+
+Explore it here:
+[Link]
+```
+
+#### Webinar / Demo / Visual Platform Template:
+```
+Asset: Demo clip, workflow carousel, webinar teaser, before/after process visual, customer quote graphic
 
 Caption:
-[Hook - first line that stops the scroll]
+[Hook tied to the finance pain or outcome]
 
-The problem: [1-2 sentences]
-The solution: [1-2 sentences about your product]
-The results: [specific outcomes from beta users]
+Before:
+[Old workflow / manual pain / control gap]
 
-Launch special: [offer details]
+After:
+[What Moss changes]
 
-Link in bio to get started.
+Who this is for:
+[target persona / company profile]
 
-[Relevant hashtags - 15-20 for Instagram]
+See the full walkthrough here:
+[Link]
+
+[Optional webinar date / CTA]
 ```
 
 ### Step 6: Press and Media Outreach
 
 **Press Release Structure:**
-1. Headline: [Company] Launches [Product] to Help [Audience] [Outcome]
-2. Subheadline: [Supporting detail with a key stat or differentiator]
-3. First paragraph: Who, what, when, where, why (the news)
-4. Quote from founder/CEO
-5. Product details and key features
-6. Market context (why now, market size, trend)
-7. Customer quote or early results
-8. Availability and pricing
-9. About the company (boilerplate)
+1. Headline: Moss Launches [Feature / Integration / Program] to Help [Audience] [Outcome]
+2. Subheadline: [Supporting detail with a strong operational benefit, market angle, or proof point]
+3. First paragraph: Who, what, when, where, why (the actual news)
+4. Quote from founder, product leader, or product marketing lead
+5. Product details and key workflow improvements
+6. Market context (finance team pressure, operational need, category shift, or partner relevance)
+7. Customer quote, partner quote, or early results
+8. Availability, markets, and rollout details
+9. About Moss (boilerplate)
 10. Contact information
 
 **Media Pitch Email Template:**
 ```
-Subject: [Angle] -- [Product Name] launches to [outcome]
+Subject: Moss launches [Launch Name] to help finance teams [outcome]
 
 Hi [Name],
 
-I'm reaching out because you've covered [related topic] and I thought [Product Name] might be interesting for your readers.
+I’m reaching out because you cover [finance ops / B2B SaaS / accounting / partnerships / automation], and I thought this launch from Moss might be relevant for your audience.
 
-[One sentence about what it does and why it's newsworthy]
+[One sentence on what it is and who it is for]
 
-[One sentence about early traction or results]
+[One sentence on why it matters now]
 
-[One sentence about what makes it different]
+[One sentence with proof, customer relevance, or partner angle]
 
-I'd love to offer you [exclusive story / early access / founder interview / demo].
-
-Happy to share more details if you're interested.
+Happy to share a demo, screenshots, customer context, or a conversation with our team.
 
 Best,
 [Name]
@@ -329,85 +341,93 @@ Best,
 ### Step 7: Influencer and Partner Coordination
 
 **Partner Outreach Timeline:**
-- Week 3: Initial outreach with personal message
-- Week 4: Follow up, share product details and demo
-- Week 5: Confirm participation, send swipe copy and affiliate links
-- Week 6: Reminder with launch day schedule
-- Week 7: Day-of coordination, thank you notes
-- Week 8: Share results, pay commissions, plan ongoing partnership
+- Week 3: Initial outreach to partners, affiliates, advisors, accounting firms, or ecosystem contacts
+- Week 4: Share launch narrative, demo, audience fit, and co-marketing angle
+- Week 5: Confirm participation, deliver partner-ready copy and assets
+- Week 6: Final reminder and launch-day plan
+- Week 7: Day-of coordination, amplification, follow-ups, thank-you notes
+- Week 8: Share results, opportunities, commissions if relevant, and next-step collaboration
 
 **What to Provide Partners:**
-- Product access (free account or sample)
-- Swipe copy for email, social, and blog
-- Branded graphics and assets
-- Unique affiliate/referral link with tracking
-- Commission structure or reciprocal promotion plan
-- Launch day schedule with specific asks
+- Product access, demo environment, or walkthrough
+- Ready-to-use copy for email, LinkedIn, webinar invites, and websites
+- Visual assets, logos, screenshots, or quote cards
+- Unique tracking links, referral links, or attribution parameters
+- Clear value proposition by audience segment
+- Launch day schedule with exact asks and timing
 
 ### Step 8: Launch Metrics Dashboard
 
 Track these metrics in real-time during launch week:
 
 **Awareness Metrics:**
-- Website traffic (total and by source)
-- Social media impressions and reach
+- Landing page traffic (total and by source)
+- LinkedIn impressions and reach
+- Webinar registrations / live event signups
 - Press mentions and backlinks
+- Partner referral traffic
 - Email open rates
 
 **Engagement Metrics:**
-- Time on site
-- Pages per session
-- Social media engagement rate
+- Time on page
+- Scroll depth and CTA click-through rate
+- Webinar attendance rate
+- Sales asset usage / internal enablement engagement
+- Social engagement rate
 - Email click-through rates
 - Demo video completion rate
 
 **Conversion Metrics:**
-- Signup/purchase conversion rate
-- Revenue generated
-- Average order value
-- Cost per acquisition
-- Email-to-conversion rate
+- Demo requests / intro bookings
+- Get-started form submissions
+- Self-serve starts or qualified signups
+- Partner-sourced leads
+- MQLs / SQLs / opportunities created
+- Pipeline generated or influenced
+- Cost per qualified lead / cost per booked meeting
 
 **Retention Metrics (Post-Launch):**
-- Day 1 / Day 7 retention
 - Feature adoption rate
+- Activation / onboarding completion
+- Expansion conversations created
 - Support ticket volume
-- NPS score
+- Customer feedback themes
+- Influenced revenue / retention indicators
 
 ### Step 9: Common Launch Mistakes to Avoid
 
-1. **Launching to nobody** -- Build the audience BEFORE the product is ready
-2. **No urgency mechanism** -- Without a deadline, people bookmark and forget
-3. **Perfectionism** -- Ship at 80% quality; iterate based on real feedback
-4. **Single-channel launch** -- Coordinate across email, social, communities, and partners
-5. **No follow-up sequence** -- Most conversions happen on days 3-7, not day 1
-6. **Ignoring time zones** -- Schedule launches and emails for your audience's active hours
-7. **No support plan** -- Launch day will generate support requests; be ready
-8. **Pricing confusion** -- Make the offer crystal clear; don't make people calculate
-9. **Forgetting mobile** -- Test every email, page, and checkout on mobile
-10. **No post-launch plan** -- The launch is the beginning, not the end
+1. **Launching without persona clarity** -- A CFO launch, controller launch, and accountant-partner launch should not sound the same
+2. **Leading with features instead of finance outcomes** -- Workflow impact, control, and month-end speed matter more than feature lists
+3. **No proof** -- Moss launches need customer evidence, operational logic, or strong product walkthroughs
+4. **Single-channel launch** -- Email, LinkedIn, webinars, partners, sales, and paid retargeting should work together
+5. **No enablement plan** -- Sales, success, and partners need crisp messaging before launch day
+6. **Ignoring markets and locales** -- DE, NL, UK, and broader EU audiences may need localized pages, proof, and language
+7. **Vague implementation story** -- Finance teams need to know setup effort, integrations, and rollout implications
+8. **Pricing or availability confusion** -- State packaging, rollout scope, and next steps clearly
+9. **Consumer-style launch content** -- Moss launches should feel credible, practical, and finance-native, not gimmicky
+10. **No post-launch plan** -- The launch should transition into nurture, enablement, adoption, or pipeline acceleration
 
 ### Step 10: Budget Allocation Guide
 
 | Budget Level | Allocation |
 |---|---|
-| **Bootstrapped ($0-500)** | 100% organic: content, communities, email list, personal outreach |
-| **Moderate ($500-5,000)** | 40% paid ads, 30% influencer/partner, 20% tools/software, 10% design |
-| **Well-Funded ($5,000-25,000)** | 35% paid ads, 25% influencer/partner, 20% PR/media, 10% events, 10% tools |
-| **Enterprise ($25,000+)** | 30% paid ads, 20% events/webinars, 20% PR, 15% influencer, 10% content, 5% tools |
+| **Bootstrapped (€0-2,000)** | 40% content/design, 30% webinar/demo setup, 20% lifecycle/CRM execution, 10% customer proof collection |
+| **Moderate (€2,000-15,000)** | 30% paid search/LinkedIn/retargeting, 25% content/video/design, 20% webinar/events, 15% partner co-marketing, 10% tools/ops |
+| **Well-Funded (€15,000-75,000)** | 30% paid demand gen, 20% content/video, 20% events/webinars, 15% partner programs, 10% customer proof production, 5% tools |
+| **Enterprise (€75,000+)** | 25% paid demand gen, 20% field/virtual events, 20% research/content, 15% partner/affiliate/co-marketing, 10% PR/media, 10% creative/localization |
 
 ### Step 11: Post-Launch Analysis Framework
 
 After the launch, generate a retrospective covering:
 
-1. **Goal vs Actual**: Did you hit your targets?
-2. **Channel Performance**: Which channels drove the most conversions?
-3. **Email Performance**: Open rates, click rates, conversion rates by email
-4. **Top Converting Content**: Which posts, pages, or ads drove the most action?
-5. **Customer Feedback Themes**: What are people saying?
+1. **Goal vs Actual**: Did you hit demos, pipeline, adoption, or awareness targets?
+2. **Channel Performance**: Which Moss channels drove the most qualified response?
+3. **Email Performance**: Open rates, click rates, conversion rates by audience segment
+4. **Top Converting Content**: Which landing pages, posts, webinars, or proof assets drove the most action?
+5. **Customer Feedback Themes**: What are finance teams, partners, and prospects saying?
 6. **What Worked**: Top 3 things that drove results
 7. **What Didn't Work**: Top 3 things to change next time
-8. **Unexpected Insights**: Surprises from the data
+8. **Unexpected Insights**: Surprises from the data, objections, or sales feedback
 9. **Next Steps**: Immediate actions based on learnings
 
 ## Output Format
@@ -448,9 +468,10 @@ Generate a file called `LAUNCH-PLAYBOOK.md` with:
 ```
 
 ## Key Principles
-- Every recommendation should be tied to the user's specific product, audience, and resources. Generic advice is useless.
-- Include specific templates they can copy-paste and customize, not just frameworks.
+- Every recommendation should be tied to the specific Moss launch, audience, market, proof assets, and resources. Generic advice is useless.
+- Use Moss's default positioning and voice automatically. Do not ask the user to define Moss's brand voice, target customer, or product categories unless the launch genuinely requires a narrower segment.
+- Use practical, finance-native hooks and frameworks: outcome first, workflow second, proof third, feature fourth.
 - If the user has run previous skills (market audit, market landing, market brand), incorporate those findings into the launch plan.
-- Time the playbook to their stated launch date and work backwards.
+- Work backwards from the stated launch date and account for locale, partner, lifecycle, sales-assisted, and self-serve requirements where relevant.
 - Always include a "minimum viable launch" option for users with limited resources.
-- Emphasize that launching is an event, not a moment -- the buildup and follow-through matter more than day one.
+- Emphasize that a Moss launch is not just a content drop -- it is a coordinated go-to-market moment that should create pipeline, proof, adoption, and internal clarity.
